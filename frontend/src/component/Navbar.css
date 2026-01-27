@@ -1,0 +1,19 @@
+.navbar{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+ul{
+    list-style: none;
+    background-color: aqua;
+    padding: 10px;
+}
+li{
+    background: rgb(142, 41, 41);
+    padding: 10px;
+    border-radius: 10px;
+}
+li:hover{
+    background: grey;
+    border-radius: 10px;
+}
