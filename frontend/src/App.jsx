@@ -1,25 +1,42 @@
-import Counter from './component/Counter';
+import { Route, Routes } from 'react-router-dom'
+import Counter from './component/Counter'
 import Navbar from './component/Navbar'
-import About from './pages/About';
-import Contact from './pages/contact';
-import Home from './pages/Home';
-import Service from './pages/service';
-const App = ()=>{
-  const element=<h1>HELLO</h1>
-  return(
+import About from './pages/About'
+import Contact from './pages/Contact'
+import Home from './pages/Home'
+import Hook from './Hooks/Hook'
+import Login from './Auth/Login'
+import Signup from './Auth/Signup'
+import UseEffectApi from './Hooks/UseEffectApi'
+import UseState from './Hooks/UseState'
+import UseEffect from './Hooks/useEffect'
+import UseRef from './Hooks/UseRef'
+import UseMemo from './Hooks/useMemo'
+import UseCallback from './Hooks/UseCallback'
+import Service from './pages/Service'
+
+const App = () => {
+  return (
     <>
-    
-    <Navbar/>
-    <Routes
-      
-    {/*<Home Name="Jith"/>*/}
-    {/*<Service/>
-    <Contact/>
-    <About/>
-    <Counter/>*/}
-
-
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home name="Ranjith" />} />
+        <Route path="/home" element={<Home name="Ranjith" />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/service" element={<Service />} />
+        <Route path="/counter" element={<Counter />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<Signup />} />
+        <Route path="/hook" element={<Hook />} />
+        <Route path="/useEffectApi" element={<UseEffectApi />} />
+        <Route path="/useState" element={<UseState />} />
+        <Route path="/useEffect" element={<UseEffect />} />
+        <Route path="/useRef" element={<UseRef />} />
+        <Route path="/usememo" element={<UseMemo />} />
+        <Route path="/useCallback" element={<UseCallback />} />
+      </Routes>
     </>
-  );
+  )
 }
-export default App;
+export default App
